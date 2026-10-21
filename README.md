@@ -39,10 +39,11 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
-
-
+TakeMeter sorts comments from r/nba into three buckets: `analysis` (backed by
+a stat, a quote, a specific play), `hot_take` (a confident opinion with
+nothing backing it up), and `reaction` (banter, a joke, no real argument).
+The point is sorting the signal from the noise in a game thread without
+reading all of it.
 
 ---
 
@@ -115,11 +116,10 @@ feed of 6 different threads (post-game threads, a daily discussion thread,
 an AMA, a fight thread). Not top-level posts, those are mostly link titles
 with no body text.
 
-**How I labelled them:** Not cold. All 241 were labelled by applying the
+**How I labelled them:** Not cold - labeled by applying the
 `analysis` / `hot_take` / `reaction` definitions and the decision rule from
 the Label Taxonomy section above, done as an AI-assisted pass, not read and
-hand-corrected row by row by me. See "How I Used AI" below, that's the
-honest version of this disclosure.
+hand-corrected row by row by me. S
 
 **Counts per label:**
 
@@ -214,17 +214,14 @@ unit 6's job, just recording what one default run actually did.
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* Reddit's own API blocked scripted access, so I asked
+  Claude for another way to pull real comments without it.
+- *What came back:* Reddit's public RSS feed works without auth. It fetched
+  comments from 6 different r/nba threads, found a rate limit the hard way,
+  and added retry/backoff and caching to work around it.
+- *What I changed:* Nothing, the approach worked once it found the RSS
+  route. I did decide which threads to pull from
 
-**Moment 2**
-
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Pre-labelling disclosure:**
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
