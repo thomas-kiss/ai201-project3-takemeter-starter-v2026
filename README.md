@@ -54,33 +54,52 @@
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `analysis`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** Backs up the claim with something checkable. A stat. A
+quote. A specific play.
 
 **Example 1:**
->
+> The union are the hottest team in the league. Haven't lost a game since
+> May. 15 games in a row unbeaten, just ended an 8 game win streak. 39 points
+> collected in the table of a possible 45.
 
 **Example 2:**
->
+> The TV breakdown of he cut off KaaT and forced bad pass to OG that Maxey
+> picked off and laid up was great! That's the stuff he does all game.
+
+### `hot_take`
+
+**Definition:** A confident opinion about a player or team. Nothing backing
+it up.
+
+**Example 1:**
+> Sixers arguably have the highest ceiling of any contender, the big 4 didn't
+> even play close to their best game.
+
+**Example 2:**
+> Bron being the glue guy is a cheat code.
+
+### `reaction`
+
+**Definition:** Just a reaction to something that happened. Banter, a joke,
+one line. No real argument in it.
+
+**Example 1:**
+> Wore a LeBron jersey tonight, but Maxey is my current favorite player.
+
+**Example 2:**
+> we sacrificed the entire eagles roster this year
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `analysis` vs. `hot_take`
 
-**The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+**The decision rule I used every time:** If it names something checkable, a
+stat, a quote, a specific play, call it `analysis`. Even if it's also got
+attitude. If it's just a confident claim with nothing checkable behind it
+("highest ceiling," "cheat code," "sky's the limit"), it's a `hot_take`. No
+matter how sure they sound.
 
 
 
