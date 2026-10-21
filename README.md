@@ -176,15 +176,28 @@ honest version of this disclosure.
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** `distilbert-base-uncased`
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** 3 epochs, learning rate 2e-5, batch size 16, max length 128,
+seed 42. All defaults, nothing changed.
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** Nothing. First run, no
+reason yet to touch a hyperparameter.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Split sizes:** train 168 / val 36 / test 37 (70/15/15 stratified).
+Per-label counts in test: `reaction` 14, `hot_take` 12, `analysis` 11. All
+above the 8-example warning line, so this split shouldn't be the noisiest
+part of the next unit's variance, though with only 11-14 per label it's
+still a small test set.
+
+Trained on: **mps** (Apple Silicon GPU via Metal), torch 2.2.2.
+
+**What actually happened:** accuracy 0.51, macro F1 0.43. Both under the
+targets set in `criteria.md`. The confusion matrix shows the model learned to
+call almost everything `reaction` (14/14 reaction recalled correctly, but it
+also called several real `analysis` and `hot_take` comments `reaction`). It
+barely separated the other two labels at all. Not tuning this yet, that's
+unit 6's job, just recording what one default run actually did.
 
 
 
