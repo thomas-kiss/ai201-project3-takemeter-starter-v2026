@@ -25,6 +25,11 @@ takemeter_out/
 .DS_Store
 Thumbs.db
 
+# Scratch intermediate data from collection, not a deliverable. labels.csv
+# is the record that matters.
+data/raw_comments.csv
+data/raw_rss/
+
 # NOTE: results.json, results_three_seeds.json and baseline_results.json are
 # deliberately NOT ignored. They're evidence the run actually happened, and
 # they're part of what gets graded. Commit them.

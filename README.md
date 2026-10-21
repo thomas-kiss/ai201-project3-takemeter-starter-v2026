@@ -110,19 +110,25 @@ matter how sure they sound.
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** r/nba. Comments pulled from the comments RSS
+feed of 6 different threads (post-game threads, a daily discussion thread,
+an AMA, a fight thread). Not top-level posts, those are mostly link titles
+with no body text.
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** Not cold. All 241 were labelled by applying the
+`analysis` / `hot_take` / `reaction` definitions and the decision rule from
+the Label Taxonomy section above, done as an AI-assisted pass, not read and
+hand-corrected row by row by me. See "How I Used AI" below, that's the
+honest version of this disclosure.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| reaction | 95 | 39.4% |
+| hot_take | 77 | 32.0% |
+| analysis | 69 | 28.6% |
+| **Total** | 241 | 100% |
 
 **Three hard cases**
 
@@ -130,25 +136,39 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "Ofc game threads are kinda absurd by nature but this is really
+> just inevitable in the three point era... it feels like so much of in
+> single game sample comes down to shooting variance... basically impossible
+> to draw major conclusions."
 >
-> *Could have been:*
+> *Could have been:* `analysis` or `hot_take`
 >
-> *I chose, because:*
+> *I chose, because:* It's reasoning about statistical variance and sample
+> size, that's analytical thinking, but it never names an actual number from
+> this game. Went with `analysis` for the reasoning style, but this is the
+> case that made me realize my rule leans on "names a number" more than it
+> should.
 
 **2.**
-> *The post:*
+> *The post:* "LeBron had the perfect glue guy stat line"
 >
-> *Could have been:*
+> *Could have been:* `analysis` or `hot_take`
 >
-> *I chose, because:*
+> *I chose, because:* It says "stat line" like it's citing something, but
+> never actually states the stat. Went with `hot_take` since there's nothing
+> checkable in the sentence itself, just the appearance of one.
 
 **3.**
-> *The post:*
+> *The post:* "Cade always looks mediocre at the start of the season. He
+> doesn't maintain his cardio in the offseason... when he takes the braids
+> out it's the sign he's ready to be good again."
 >
-> *Could have been:*
+> *Could have been:* `hot_take` or `reaction`
 >
-> *I chose, because:*
+> *I chose, because:* It's delivered as a running joke (the braids thing),
+> but it's also stating a claimed behavior pattern as if it were fact. Went
+> with `hot_take` since it's an unsupported claim dressed up as an inside
+> joke, not just banter.
 
 ---
 
