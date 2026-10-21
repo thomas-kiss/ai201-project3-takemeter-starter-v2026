@@ -51,63 +51,56 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall accuracy
 
-<!-- Your criterion. It must name a number. -->
+Overall accuracy of at least 0.65 on the held-out test set.
 
-
-
-**Why this target:**
-
-
+**Why this target:** Three labels. A coin flip gets about 33%. 0.65 is
+clearly above guessing and is where I'd actually trust the model to sort
+comments for me instead of double checking every one.
 
 ---
 
-## 2.
+## 2. `hot_take` vs `analysis`, the hard boundary
 
-<!-- Your criterion. -->
+F1 for `hot_take` of at least 0.55 on the held-out set.
 
-
-
-**Why this target:**
-
-
+**Why this target:** This is my hardest boundary. I expect the model to
+mix up `hot_take` and `analysis` sometimes, same as I did when labeling.
+0.55 is lower than my overall target on purpose.
 
 ---
 
-## 3.
+## 3. `reaction` performance
 
-<!-- Your criterion. -->
+F1 for `reaction` of at least 0.60 on the held-out set.
 
-
-
-**Why this target:**
-
-
+**Why this target:** `reaction` is the easiest label to spot. Banter and
+jokes don't look like the other two. I expect this to be the model's best
+label, so the bar is higher here than for `hot_take`.
 
 ---
 
-## 4.
+## 4. Balance
 
-<!-- Your criterion. -->
+No label makes up less than 20% of the 200 examples in `labels.csv`.
 
-
-
-**Why this target:**
-
-
+**Why this target:** The project caps any label at 70%. That stops one
+label from taking over. But a label could still sit at 21% and be too thin
+to measure well. 20% of 200 is 40 examples, enough that the test split
+still has a reasonable number in it.
 
 ---
 
-## 5.
+## 5. Confidence
 
-<!-- Your criterion. -->
+When the model's top prediction has confidence 0.8 or higher, it should be
+right at least 85% of the time.
 
-
-
-**Why this target:**
-
-
+**Why this target:** If the model is going to say it's sure, I want sure to
+mean something. 85% leaves room for the model to be wrong sometimes even
+when confident, since this is a small dataset, but it should still beat its
+overall accuracy by a real margin when it claims to be confident.
 
 ---
 
